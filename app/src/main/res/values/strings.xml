@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">AvanceProyecto</string>
+    <!--COMPRAR-->
+    <string name="tvComprar">COMPRAR</string>
+    <string-array name="productos"></string-array>
+    <string name="tvCiudad">Ciudad</string>
+    <string name="tvDireccion">Dirección</string>
+    <string name="tvMetodoPago">Seleccione método de pago:</string>
+    <string name="spMetodoPago"></string>
+    <string-array name="metodosPago">
+        <item>Tarjeta Débito</item>
+        <item>Tarjeta Crédito</item>
+        <item>PSE</item>
+    </string-array>
+    <string name="etNumTarjeta">Número tarjeta</string>
+    <string name="etFechaVenTarjeta">fecha ven.</string>
+    <string name="etCodTarjeta">COD</string>
+    <string name="btnPagar">PAGAR</string>
+</resources>

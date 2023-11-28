@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/ivCancelar"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:src="@drawable/iv_cancelar" />
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_below="@+id/ivCancelar"
+            android:src="@drawable/iv_logo" />
+
+        <TextView
+            android:id="@+id/tvComprar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivLogo"
+            android:layout_below="@+id/ivCancelar"
+            android:padding="20dp"
+            android:textSize="40dp"
+            android:textAlignment="center"
+            android:text="@string/tvComprar" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/ivProductos"
+            android:layout_width="30dp"
+            android:layout_height="48dp"
+            android:src="@drawable/iv_productos" />
+
+        <Spinner
+            android:id="@+id/spProductos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivProductos"
+            android:minHeight="48dp"
+            android:entries="@array/productos"/>
+
+        <ImageView
+            android:id="@+id/ivCiudad"
+            android:layout_width="30dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/ivProductos"
+            android:src="@drawable/iv_ciudad" />
+
+        <TextView
+            android:id="@+id/tvCiudad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/spProductos"
+            android:layout_toRightOf="@+id/ivCiudad"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textSize="18dp"
+            android:text="@string/tvCiudad" />
+
+        <ImageView
+            android:id="@+id/ivDireccion"
+            android:layout_width="30dp"
+            android:layout_height="48dp"
+            android:layout_below="@+id/ivCiudad"
+            android:src="@drawable/iv_direccion" />
+
+        <TextView
+            android:id="@+id/tvDireccion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCiudad"
+            android:layout_toRightOf="@+id/ivDireccion"
+            android:minHeight="48dp"
+            android:padding="10dp"
+            android:textSize="18dp"
+            android:text="@string/tvDireccion" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tvMetodoPago"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:text="@string/tvMetodoPago"
+            android:textSize="18dp" />
+
+        <Spinner
+            android:id="@+id/spMetodoPago"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvMetodoPago"
+            android:minHeight="48dp"
+            android:layout_marginLeft="30dp"
+            android:entries="@array/metodosPago"/>
+
+        <ImageView
+            android:id="@+id/ivNumTarjeta"
+            android:layout_width="30dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/spMetodoPago"
+            android:src="@drawable/iv_metodos_pago" />
+
+        <EditText
+            android:id="@+id/etNumTarjeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivNumTarjeta"
+            android:layout_below="@id/spMetodoPago"
+            android:padding="10dp"
+            android:ems="10"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:hint="@string/etNumTarjeta"/>
+
+        <ImageView
+            android:id="@+id/ivFechaVenTarjeta"
+            android:layout_width="30dp"
+            android:layout_height="48dp"
+            android:layout_below="@id/ivNumTarjeta"
+            android:src="@drawable/iv_metodos_pago" />
+
+        <EditText
+            android:id="@+id/etFechaVenTarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/ivFechaVenTarjeta"
+            android:layout_below="@id/etNumTarjeta"
+            android:padding="10dp"
+            android:ems="10"
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:hint="@string/etFechaVenTarjeta"/>
+
+        <EditText
+            android:id="@+id/etCodTarjeta"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etNumTarjeta"
+            android:layout_toRightOf="@id/etFechaVenTarjeta"
+            android:ems="10"
+            android:hint="@string/etCodTarjeta"
+            android:inputType="number"
+            android:minHeight="48dp" />
+
+        <Button
+            android:id="@+id/btnPagar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/etFechaVenTarjeta"
+            android:layout_centerInParent="true"
+            android:backgroundTint="@android:color/transparent"
+            android:text="@string/btnPagar"
+            android:textColor="@color/darkCrimson" />
+
+    </RelativeLayout>
+
+</LinearLayout>
